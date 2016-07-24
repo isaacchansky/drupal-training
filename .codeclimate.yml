@@ -1,0 +1,25 @@
+---
+engines:
+  phpmd:
+    enabled: true
+    config:
+      file_extensions: "php,inc,module"
+      rulesets: ".phpmd.xml"
+  phpcodesniffer:
+    enabled: true
+    config:
+      file_extensions: "php,inc,module"
+      encoding: utf-8
+      standard: "Drupal"
+      ignore_warnings: true
+ratings:
+  paths:
+  - "*.module"
+  - "*.install"
+  - "src/**.php"
+exclude_paths:
+- "**/Test/**/*"
+- config
+- css
+- templates
+- tests
